@@ -46,14 +46,14 @@ class DataTransformation:
                 steps=[
                 ("imputer", SimpleImputer(strategy="most_frequent")),
                 ("one_hot_encoder", OneHotEncoder()),
-                ("scaler", StandardScaler())
+                ("scaler", StandardScaler(with_mean = False))
                 ] 
             )
 
             logging.info("Categorical columns standard scaling completed.")
             
-            logging.info("numerical columns: ", numerical_columns)
-            logging.info("Categorical columns: ", categorical_columns)
+            logging.info(f"numerical columns: {numerical_columns}")
+            logging.info(f"Categorical columns: {categorical_columns}")
 
             preprocessor = ColumnTransformer(
                 [

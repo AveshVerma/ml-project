@@ -100,7 +100,7 @@ celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
-
+.DS_Store
 # Environments
 .artifacts
 artifacts/
@@ -132,3 +132,4 @@ dmypy.json
 
 #custom
 *.code-workspace
+catboost_info
